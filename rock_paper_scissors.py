@@ -1,5 +1,5 @@
 #inspired from Angela Yu on Udemy, added my own twists
-#all code by me
+#all code by jai sundaram
 
 #importing random for random choices, and getpass to hide userinput for multiplayer
 import random

@@ -1,5 +1,5 @@
 #idea by angela yu on udemy
-#all code by me
+#all code by jai sundaram
 import random
 #creating variables and lists needed for program
 x = 0
