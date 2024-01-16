@@ -28,7 +28,6 @@ while anotherOne == True:
         randomPosition = random.randint(0, length -1) 
         randomLetter = random.randint(0, len(letters) - 1) 
         passwordList[randomPosition] = letters[randomLetter]
-        print(letters[randomLetter])
     for i in range(0, maxNumbers):
         while passwordList[randomPosition] != "-":
             randomPosition = random.randint(0, length - 1)
