@@ -17,7 +17,7 @@ a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8
               88                                             
               88           
       ''')
-#creating variables that determine if the appllicaton will continue running
+
 anotherOne = True
 askAnother = ""
 option = ""
@@ -33,11 +33,14 @@ while anotherOne == True:
         for i in range(0, len(word)):
             wordList.append(word[i])
             encryptedList.append("x")
-        for i in range(0, len(word)):
+        for i in range(0, len(word)):   
             if wordList[i] in letters:
                 newLetter = word[i]
                 index = letters.index(newLetter)
-                encryptedList[i] = letters[index + shift_number]
+                if index + shift_number > len(letters) -1:
+                    encryptedList[i] = letters[(index + shift_number) - (len(letters))]
+                else:
+                    encryptedList[i] = letters[index + shift_number]
             else:
                 encryptedList[i] = wordList[i]
         encryptedWord = "".join(encryptedList)
@@ -57,6 +60,10 @@ while anotherOne == True:
             if wordList[i] in letters:
                 newLetter = word[i]
                 index = letters.index(newLetter)
+                if index - shift_number < 0:
+                    decryptedList[i] = letters[(index - shift_number) + (len(letters))]
+                else:
+                    decryptedList[i] = letters[index + shift_number]
                 decryptedList[i] = letters[index - shift_number]
             else:
                 decryptedList[i] = wordList[i]
@@ -66,6 +73,7 @@ while anotherOne == True:
     userWord = input("What is the word you would like to encrypt/decrypt?: ")
     userWord = userWord.lower()
     user_shift_number = int(input("Please enter the shift number: "))
+    user_shift_number = user_shift_number % 26
     if option == "e":
         encrypt(userWord, user_shift_number)
     else:
