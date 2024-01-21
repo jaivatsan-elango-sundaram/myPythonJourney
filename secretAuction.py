@@ -1,5 +1,6 @@
 #idea by angela yu on udemy
 #all code by jai sundaram
+from getpass import getpass
 #created variables necessary
 anotherBidder = True
 askAnother = ""
@@ -10,7 +11,7 @@ def bid(name, bid):
 while anotherBidder == True:
 #preliminary information for adding the bid
     name = input("What is your name?")
-    bidValue = int(input("How much would you like to bid? (Enter the numerical value only) "))
+    bidValue = int(getpass("How much would you like to bid? (Enter the numerical value only) "))
     bid(name, bidValue)
     askAnother = input("Is there another bidder? (y/n) ")
     if askAnother == "n":
