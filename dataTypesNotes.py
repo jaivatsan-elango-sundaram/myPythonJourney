@@ -1,3 +1,4 @@
+import math
 #To get a certain character from a string, use can use the index to do so:
 #example:
 test = "hello"
@@ -37,6 +38,9 @@ print("This is what you get when convert a double to an int (Our test value was 
 #however, you could use the round() function if you would like to actually round the number to the nearest whole number 
 print(round(intTesting))
 
+#use ceil() to round up regardless of the decimal. 
+#for example:
+print(f"ceil: {math.ceil(4.2)}")
 #you could also specify which decimal place you want to round it too. round(value, decimal place)
 print(round(intTesting,2))
 #you can add an int and a float together 

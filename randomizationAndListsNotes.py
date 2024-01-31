@@ -55,3 +55,5 @@ best_selling_sedans = ["Camry", "Civic", "Jetta"]
 best_selling_trucks = ["F-150", "Sliverado", "RAM 1500"]
 best_selling_cars = [best_selling_sedans, best_selling_trucks]
 print(best_selling_cars)
+
+#.split() splits the inputs and puts each indivdual item into a list 
